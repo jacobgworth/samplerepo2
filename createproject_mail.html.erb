@@ -8,15 +8,18 @@
         <p>Team Name: <%=@tname%></p>
         <p>Team Leader: <%=@txtleader%></p>
         <p>Created Project:<br>
-        	Plant A Tree: <%=@txttree%><br>
-        	Solar Lighting: <%=@txtsolar%><br>
-        	Water Filters: <%=@txtwater%><br>
-        	Pair of Goats: <%=@txtgoats%><br>
-        	Kids Club: <%=@txtkids%><br>
-        	House Restoration <%=@txthouse%><br>
-        	Roof Repair: <%=@txtroof%><br>
-        	Build Latrine: <%=@txtlatrine%><br>
-        	Build A Home: <%=@txtbuild%>
+        	Plant A Tree: <%=humanize_checkbox(@txttree)%><br>
+        	Solar Lighting: <%=humanize_checkbox(@txtsolar)%><br>
+        	Water Filters: <%=humanize_checkbox(@txtwater)%><br>
+        	Pair of Goats: <%=humanize_checkbox(@txtgoats)%><br>
+        	Kids Club: <%=humanize_checkbox(@txtkids)%><br>
+        	House Restoration: <%=humanize_checkbox(@txthouse)%> <br>
+        	Roof Repair: <%=humanize_checkbox(@txtroof)%> <br>
+        	Build Latrine: <%=humanize_checkbox(@txtlatrine)%> <br>
+        	Build A Home: <%=humanize_checkbox(@txtbuild)%>
+        </p>
+        <p>
+        	<b>Total Price For Project:</b>
         </p>
 	</body>
 </html>
