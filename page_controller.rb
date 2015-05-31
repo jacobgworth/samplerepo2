@@ -171,10 +171,12 @@ class PageController < ApplicationController
     @title = "Create Your Project"
     @txtname = params[:txtname]
     @txtemail = params[:txtemail]
-    @txtdates = params[:txtdates]
+    @txtdatesone = params[:txtdatesone]
+    @txtdatestwo = params[:txtdatestwo]
     @tname = params[:tname]
     @txtleader = params[:txtleader]
     @txttree = params[:txttree]
+    @txtsolar = params[:txtsolar]  
     @txtsolar = params[:txtsolar]
     @txtwater = params[:txtwater]
     @txtgoats = params[:txtgoats]
@@ -183,18 +185,17 @@ class PageController < ApplicationController
     @txtroof = params[:txtroof]
     @txtlatrine = params[:txtlatrine]
     @txtbuild = params[:txtbuild]
-    @totalPrice = params[:totalPrice]
      if !@txtname.nil? && @txtname != '' && !@txtemail.nil? && @txtemail != "" && (params[:formname].nil? || params[:formname].empty?)
       @isvalid = true
       @data = {
         :txtname => @txtname,
         :txtemail => @txtemail,
-        :txtdates => @txtdates,
+        :txtdatesone => @txtdatesone,
+        :txtdatestwo => @txtdatestwo,
         :tname => @tname,
         :txtleader => @txtleader,
         :txttree => @txttree,
         :txtsolar => @txtsolar,
-        :txtwater => @txtwater,
         :txtgoats => @txtgoats,
         :txtkids => @txtkids,
         :txthouse => @txthouse,
@@ -202,7 +203,6 @@ class PageController < ApplicationController
         :txtlatrine => @txtlatrine,
         :txtbuild => @txtbuild,
       }
-
       ContactUsMailer.createproject_mail(@data).deliver
       respond_to do |format|
         format.html {render :layout=>"homeLayout"}

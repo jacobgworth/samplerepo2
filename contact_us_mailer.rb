@@ -34,7 +34,8 @@ class ContactUsMailer < ActionMailer::Base
 
     @txtname = @data[:txtname]
     @txtemail = @data[:txtemail]
-    @txtdates = @data[:txtdates]
+    @txtdatesone = @data[:txtdatesone]
+    @txtdatestwo = @data[:txtdatestwo]
     @tname = @data[:tname]
     @txtleader = @data[:txtleader]
     @txttree = @data[:txttree]

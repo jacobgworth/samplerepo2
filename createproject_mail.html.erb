@@ -1,10 +1,10 @@
 <html>
-	<head><title>Create Project Message</title></head>
+	<head><title>Create Project Message</title>
 	<body>
 		<h1>A Project Has Been Successfully Created!</h1>
 		<p>Name: <%=@txtname%></p>
 		<p>Email: <%=@txtemail%>
-		<p>Trip Dates: <%=@txtdates%></p>
+		<p>Trip Dates: <%=@txtdatesone%> - <%=@txtdatestwo%></p>
         <p>Team Name: <%=@tname%></p>
         <p>Team Leader: <%=@txtleader%></p>
         <p>Created Project:<br>
@@ -18,8 +18,8 @@
         	Build Latrine: <%=humanize_checkbox(@txtlatrine)%> <br>
         	Build A Home: <%=humanize_checkbox(@txtbuild)%>
         </p>
-        <p>
-        	<b>Total Price For Project:</b>
+        <p> <b>Total Price:</b>
         </p>
 	</body>
+
 </html>

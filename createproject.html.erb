@@ -14,16 +14,22 @@
 			<br />
 			Create Your Project</h1>
 			<div class="forms">
+				<%unless @isvalid.nil?%>
+				<div style="padding-bottom:20px;"><h3>Please refresh the page to create a new project.</h3></div>
+				<%end%>
 			<% if @isvalid.nil?%>
 			<form method="post" id="createproject">
 				<input type="text" name="formname" value="" style="display:none;"/>
 				<div class="field">Your Name: 			<input type="text" id="txtname" name="txtname"><br></div>
 					<div class="field">Your Email: 			<input type="text" id="txtemail" name="txtemail"></div>
-					<div class="field">Trip Dates: <input type="text" id="txtdates" name="txtdates"><br></div>
+					<div class="field">Trip Dates: <br><br>
+						Anticipated Departure Date<input type="date" id="txtdatesone" name="txtdatesone"><br><br>
+						Anticipated Arrival Date<input type="date" id="txtdatestwo" name="txtdatestwo"><br></div>
 					<div class="field">Team Name: <input type="text" id="teamname" name="tname"><br></div>
 					<div class="field">Team Leader: <input type="text" id="teamleader" name="txtleader"><br></div>
 					<div class="field">Create Your Project:<br></div>
-					<div class="field">Plant A Tree:    <input type="checkbox" id="txttree" name="txttree" onclick="calculateTotal()"><br></div>
+					<div class="field">Plant A Tree:    <input type="checkbox" id="txttree" name="txttree" onclick="calculateTotal()"><br>
+						</div>
 					<div class="field">Solar Pannel (1):    <input type="checkbox" id="txtsolar" name="txtsolar" onclick="calculateTotal()"><br></div>
 					<div class="field">Water Filter (1 Filter):    <input type="checkbox" id="txtwater" onclick="calculateTotal()" name="txtwater"><br></div>
 					<div class="field">A Pair of Goats: <input type="checkbox" id="txtgoats" onclick="calculateTotal()" name="txtgoats"><br></div>
@@ -32,20 +38,16 @@
 					<div class="field">Roof Repair: <input type="checkbox" onclick="calculateTotal()" id="txtroof" name="txtroof"><br></div>
 					<div class="field">Latrine: <input type="checkbox" onclick="calculateTotal()" id="txtlatrine" name="txtlatrine"><br></div>
 					<div class="field">Build A Home: <input type="checkbox" onclick="calculateTotal()" id="txtbuild" name="txtbuild"><br></div>
-					<div class="field" id="totalPrice" name="totalPrice"></div>				
-						<div class="actions"><input type="submit" value="Submit" onclick="return validate();"><br></div>
-				</form>	
+					<div class="field" id="totalPrice" name="totalPrice"></div>
+					<div class="actions"><input type="submit" value="Submit" onclick="return validate();"><br></div>
+			</form>	
 			<%end%>
-			</div>
-		</div><!-- End Content Left -->
-			<div class="clearfix">
-				<!--x-->
 			</div>
 		</div>
 			<div class="clearfix" style="height:40px;">
 				<!--x-->
 			</div>
 			
-			</div>
+	</div>
 
 </div>

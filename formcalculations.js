@@ -12,9 +12,10 @@ function planttreesPrice()
     {
         planttreePrice=7.00;
     }
+
     //finally we return the treePrice
     return planttreePrice;
-}//treePrice() finds the tree price based on a check box selection
+}
 
 function solarpannelsPrice()
 {
@@ -127,6 +128,7 @@ function buildhomesPrice()
 	}
 	return buildhomePrice
 }
+
 
 function calculateTotal()
 {
